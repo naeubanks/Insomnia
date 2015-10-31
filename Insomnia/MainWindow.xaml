@@ -1,0 +1,15 @@
+﻿<Window x:Class="Insomnia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Insomnia"
+        mc:Ignorable="d"
+        Title="Insomnia" Height="261.618" Width="525"
+        Icon="./Turbomilk-Zoom-Eyed-Creatures-Owl.ico">
+    <Grid>
+        <Button x:Name="monitorBtn" Content="Turn Monitor Off" HorizontalAlignment="Left" Margin="10,196,0,0" VerticalAlignment="Top" Width="499" Click="monitorOff_Click" Height="27"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="499"><Run Text="While Insomnia is running your device's power plan is adjusted so that it never goes to sleep"/><LineBreak/><Run Text="allowing you to run tasks in the background (such as downloading content or casting video via DLNA). Close this window to restore the original power plan."/><LineBreak/><Run/><LineBreak/><Run Text="Use the button below to turn off your screen to conserve power under this plan rather than having to wait for the screen off timeout to take effect. This is to account for the fact that most mobile devices (e.g. Surface) do not allow you to modify the behavior of the physical power button to simply turn the screen off and instead will put the device to sleep."/><LineBreak/><Run/><LineBreak/><Run Text="Turn the screen back on by pressing any key or the physical power button)."/><LineBreak/><Run/></TextBlock>
+
+    </Grid>
+</Window>
