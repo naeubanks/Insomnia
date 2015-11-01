@@ -125,7 +125,7 @@ namespace Insomnia
 
         public static void TurnOffMonitor()
         {
-            SendMessage(new IntPtr(HWND_TOPMOST), WM_SYSCOMMAND, new IntPtr(SC_MONITORPOWER), new IntPtr(MONITOR_OFF));
+            PostMessage(new IntPtr(HWND_TOPMOST), WM_SYSCOMMAND, new IntPtr(SC_MONITORPOWER), new IntPtr(MONITOR_OFF));
         }
 
         [DllImport("powrprof.dll", SetLastError = true)]
@@ -158,7 +158,7 @@ namespace Insomnia
         public static extern uint PowerReadFriendlyName(IntPtr RootPowerKey, ref Guid SchemeGuid, IntPtr SubGroupOfPowerSettingsGuid, IntPtr PowerSettingGuid, IntPtr Buffer, ref uint BufferSize);
 
         [DllImport("user32.dll")]
-        static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+        static extern IntPtr PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
 
         static readonly int HWND_TOPMOST = -1;
         static readonly int SC_MONITORPOWER = 0xF170;
